@@ -20,6 +20,9 @@
 		9ED991552BB223FE00D43FDA /* ServicesInformationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED9914F2BB223FE00D43FDA /* ServicesInformationContainer.swift */; };
 		9ED991592BB2285B00D43FDA /* ServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED991582BB2285B00D43FDA /* ServiceTableViewCell.swift */; };
 		9ED9915C2BB22BD500D43FDA /* UIView+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED9915B2BB22BD500D43FDA /* UIView+ext.swift */; };
+		9ED9915F2BB23E7300D43FDA /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED9915E2BB23E7300D43FDA /* Service.swift */; };
+		9ED991612BB23E9F00D43FDA /* ResponseBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED991602BB23E9F00D43FDA /* ResponseBody.swift */; };
+		9ED991632BB23EC800D43FDA /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED991622BB23EC800D43FDA /* ApiResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		9ED9914F2BB223FE00D43FDA /* ServicesInformationContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesInformationContainer.swift; sourceTree = "<group>"; };
 		9ED991582BB2285B00D43FDA /* ServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTableViewCell.swift; sourceTree = "<group>"; };
 		9ED9915B2BB22BD500D43FDA /* UIView+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ext.swift"; sourceTree = "<group>"; };
+		9ED9915E2BB23E7300D43FDA /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		9ED991602BB23E9F00D43FDA /* ResponseBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseBody.swift; sourceTree = "<group>"; };
+		9ED991622BB23EC800D43FDA /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				9ED9915A2BB22B9100D43FDA /* Extensions */,
-				9ED991562BB2279600D43FDA /* Helpers */,
+				9ED9915D2BB23E5E00D43FDA /* Entities */,
 				9ED991492BB2239F00D43FDA /* Modules */,
 				9EA203DB2BB21C9F00B3233A /* Support */,
 				9EA203BD2BB219ED00B3233A /* ViewController.swift */,
@@ -104,13 +110,6 @@
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		9ED991562BB2279600D43FDA /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
 		9ED991572BB2284400D43FDA /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +124,16 @@
 				9ED9915B2BB22BD500D43FDA /* UIView+ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9ED9915D2BB23E5E00D43FDA /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				9ED9915E2BB23E7300D43FDA /* Service.swift */,
+				9ED991602BB23E9F00D43FDA /* ResponseBody.swift */,
+				9ED991622BB23EC800D43FDA /* ApiResponse.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,11 +236,14 @@
 				9EA203BE2BB219ED00B3233A /* ViewController.swift in Sources */,
 				9ED991522BB223FE00D43FDA /* ServicesInformationViewController.swift in Sources */,
 				9EA203BA2BB219ED00B3233A /* AppDelegate.swift in Sources */,
+				9ED991632BB23EC800D43FDA /* ApiResponse.swift in Sources */,
 				9ED991542BB223FE00D43FDA /* ServicesInformationInteractor.swift in Sources */,
 				9ED9915C2BB22BD500D43FDA /* UIView+ext.swift in Sources */,
+				9ED9915F2BB23E7300D43FDA /* Service.swift in Sources */,
 				9ED991552BB223FE00D43FDA /* ServicesInformationContainer.swift in Sources */,
 				9ED991512BB223FE00D43FDA /* ServicesInformationRouter.swift in Sources */,
 				9ED991532BB223FE00D43FDA /* ServicesInformationProtocols.swift in Sources */,
+				9ED991612BB23E9F00D43FDA /* ResponseBody.swift in Sources */,
 				9ED991592BB2285B00D43FDA /* ServiceTableViewCell.swift in Sources */,
 				9EA203BC2BB219ED00B3233A /* SceneDelegate.swift in Sources */,
 				9ED991502BB223FE00D43FDA /* ServicesInformationPresenter.swift in Sources */,

@@ -94,7 +94,7 @@ class ServiceTableViewCell: UITableViewCell {
             .marginLeft(Constants.descriptionLabel.marginLeft)
             .right(Constants.descriptionLabel.right + proceedImageTotalWidth)
             .sizeToFit(.widthFlexible)
-        
+           
         proceedImageView.pin
             .right(Constants.proceedImageView.right)
             .vCenter()
