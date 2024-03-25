@@ -12,6 +12,12 @@
 		9EA203BE2BB219ED00B3233A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA203BD2BB219ED00B3233A /* ViewController.swift */; };
 		9EA203C32BB219EF00B3233A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EA203C22BB219EF00B3233A /* Assets.xcassets */; };
 		9EA203DA2BB21B7600B3233A /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 9EA203D92BB21B7600B3233A /* PinLayout */; };
+		9ED991502BB223FE00D43FDA /* ServicesInformationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED9914A2BB223FE00D43FDA /* ServicesInformationPresenter.swift */; };
+		9ED991512BB223FE00D43FDA /* ServicesInformationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED9914B2BB223FE00D43FDA /* ServicesInformationRouter.swift */; };
+		9ED991522BB223FE00D43FDA /* ServicesInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED9914C2BB223FE00D43FDA /* ServicesInformationViewController.swift */; };
+		9ED991532BB223FE00D43FDA /* ServicesInformationProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED9914D2BB223FE00D43FDA /* ServicesInformationProtocols.swift */; };
+		9ED991542BB223FE00D43FDA /* ServicesInformationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED9914E2BB223FE00D43FDA /* ServicesInformationInteractor.swift */; };
+		9ED991552BB223FE00D43FDA /* ServicesInformationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED9914F2BB223FE00D43FDA /* ServicesInformationContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +27,12 @@
 		9EA203BD2BB219ED00B3233A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9EA203C22BB219EF00B3233A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9EA203C72BB219EF00B3233A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9ED9914A2BB223FE00D43FDA /* ServicesInformationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesInformationPresenter.swift; sourceTree = "<group>"; };
+		9ED9914B2BB223FE00D43FDA /* ServicesInformationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesInformationRouter.swift; sourceTree = "<group>"; };
+		9ED9914C2BB223FE00D43FDA /* ServicesInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesInformationViewController.swift; sourceTree = "<group>"; };
+		9ED9914D2BB223FE00D43FDA /* ServicesInformationProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesInformationProtocols.swift; sourceTree = "<group>"; };
+		9ED9914E2BB223FE00D43FDA /* ServicesInformationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesInformationInteractor.swift; sourceTree = "<group>"; };
+		9ED9914F2BB223FE00D43FDA /* ServicesInformationContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesInformationContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 		9EA203B82BB219ED00B3233A /* vk_test */ = {
 			isa = PBXGroup;
 			children = (
+				9ED991492BB2239F00D43FDA /* Modules */,
 				9EA203DB2BB21C9F00B3233A /* Support */,
 				9EA203BD2BB219ED00B3233A /* ViewController.swift */,
 				9EA203C72BB219EF00B3233A /* Info.plist */,
@@ -69,6 +82,19 @@
 				9EA203BB2BB219ED00B3233A /* SceneDelegate.swift */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		9ED991492BB2239F00D43FDA /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				9ED9914A2BB223FE00D43FDA /* ServicesInformationPresenter.swift */,
+				9ED9914B2BB223FE00D43FDA /* ServicesInformationRouter.swift */,
+				9ED9914C2BB223FE00D43FDA /* ServicesInformationViewController.swift */,
+				9ED9914D2BB223FE00D43FDA /* ServicesInformationProtocols.swift */,
+				9ED9914E2BB223FE00D43FDA /* ServicesInformationInteractor.swift */,
+				9ED9914F2BB223FE00D43FDA /* ServicesInformationContainer.swift */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,8 +195,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EA203BE2BB219ED00B3233A /* ViewController.swift in Sources */,
+				9ED991522BB223FE00D43FDA /* ServicesInformationViewController.swift in Sources */,
 				9EA203BA2BB219ED00B3233A /* AppDelegate.swift in Sources */,
+				9ED991542BB223FE00D43FDA /* ServicesInformationInteractor.swift in Sources */,
+				9ED991552BB223FE00D43FDA /* ServicesInformationContainer.swift in Sources */,
+				9ED991512BB223FE00D43FDA /* ServicesInformationRouter.swift in Sources */,
+				9ED991532BB223FE00D43FDA /* ServicesInformationProtocols.swift in Sources */,
 				9EA203BC2BB219ED00B3233A /* SceneDelegate.swift in Sources */,
+				9ED991502BB223FE00D43FDA /* ServicesInformationPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
