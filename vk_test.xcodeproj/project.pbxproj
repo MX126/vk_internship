@@ -18,6 +18,8 @@
 		9ED991532BB223FE00D43FDA /* ServicesInformationProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED9914D2BB223FE00D43FDA /* ServicesInformationProtocols.swift */; };
 		9ED991542BB223FE00D43FDA /* ServicesInformationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED9914E2BB223FE00D43FDA /* ServicesInformationInteractor.swift */; };
 		9ED991552BB223FE00D43FDA /* ServicesInformationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED9914F2BB223FE00D43FDA /* ServicesInformationContainer.swift */; };
+		9ED991592BB2285B00D43FDA /* ServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED991582BB2285B00D43FDA /* ServiceTableViewCell.swift */; };
+		9ED9915C2BB22BD500D43FDA /* UIView+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED9915B2BB22BD500D43FDA /* UIView+ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		9ED9914D2BB223FE00D43FDA /* ServicesInformationProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesInformationProtocols.swift; sourceTree = "<group>"; };
 		9ED9914E2BB223FE00D43FDA /* ServicesInformationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesInformationInteractor.swift; sourceTree = "<group>"; };
 		9ED9914F2BB223FE00D43FDA /* ServicesInformationContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesInformationContainer.swift; sourceTree = "<group>"; };
+		9ED991582BB2285B00D43FDA /* ServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTableViewCell.swift; sourceTree = "<group>"; };
+		9ED9915B2BB22BD500D43FDA /* UIView+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 		9EA203B82BB219ED00B3233A /* vk_test */ = {
 			isa = PBXGroup;
 			children = (
+				9ED9915A2BB22B9100D43FDA /* Extensions */,
+				9ED991562BB2279600D43FDA /* Helpers */,
 				9ED991492BB2239F00D43FDA /* Modules */,
 				9EA203DB2BB21C9F00B3233A /* Support */,
 				9EA203BD2BB219ED00B3233A /* ViewController.swift */,
@@ -87,6 +93,7 @@
 		9ED991492BB2239F00D43FDA /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				9ED991572BB2284400D43FDA /* Cell */,
 				9ED9914A2BB223FE00D43FDA /* ServicesInformationPresenter.swift */,
 				9ED9914B2BB223FE00D43FDA /* ServicesInformationRouter.swift */,
 				9ED9914C2BB223FE00D43FDA /* ServicesInformationViewController.swift */,
@@ -95,6 +102,29 @@
 				9ED9914F2BB223FE00D43FDA /* ServicesInformationContainer.swift */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		9ED991562BB2279600D43FDA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9ED991572BB2284400D43FDA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9ED991582BB2285B00D43FDA /* ServiceTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		9ED9915A2BB22B9100D43FDA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9ED9915B2BB22BD500D43FDA /* UIView+ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,9 +228,11 @@
 				9ED991522BB223FE00D43FDA /* ServicesInformationViewController.swift in Sources */,
 				9EA203BA2BB219ED00B3233A /* AppDelegate.swift in Sources */,
 				9ED991542BB223FE00D43FDA /* ServicesInformationInteractor.swift in Sources */,
+				9ED9915C2BB22BD500D43FDA /* UIView+ext.swift in Sources */,
 				9ED991552BB223FE00D43FDA /* ServicesInformationContainer.swift in Sources */,
 				9ED991512BB223FE00D43FDA /* ServicesInformationRouter.swift in Sources */,
 				9ED991532BB223FE00D43FDA /* ServicesInformationProtocols.swift in Sources */,
+				9ED991592BB2285B00D43FDA /* ServiceTableViewCell.swift in Sources */,
 				9EA203BC2BB219ED00B3233A /* SceneDelegate.swift in Sources */,
 				9ED991502BB223FE00D43FDA /* ServicesInformationPresenter.swift in Sources */,
 			);
