@@ -99,4 +99,35 @@ extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            tableView.deselectRow(at: indexPath, animated: true)
+        
+            let service = services[indexPath.row]
+        
+            guard let url = URL(string: service.link) else {
+                print("Invalid website URL")
+                return
+            }
+            
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                print("Cannot open URL")
+            }
+        }
+        
+        func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
+            guard let cell = tableView.cellForRow(at: indexPath) as? ServiceTableViewCell else {
+                return
+            }
+            cell.setHighlighted(true, animated: true)
+        }
+        
+        func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
+            guard let cell = tableView.cellForRow(at: indexPath) as? ServiceTableViewCell else {
+                return
+            }
+            cell.setHighlighted(false, animated: true)
+        }
 }

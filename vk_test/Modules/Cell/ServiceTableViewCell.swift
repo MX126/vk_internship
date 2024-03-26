@@ -10,7 +10,7 @@ import PinLayout
 
 class ServiceTableViewCell: UITableViewCell {
     
-    // MARK: - private properties
+    // MARK: - properties
     
     let iconImageView = UIImageView()
     let nameLabel = UILabel()
