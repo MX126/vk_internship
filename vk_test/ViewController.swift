@@ -13,13 +13,18 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupTableView()
         loadServicesData()
         view.backgroundColor = .systemMint
     }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        tableView.frame = view.bounds
+    }
     
     func setupTableView() {
-        tableView = UITableView(frame: self.view.bounds, style: .plain)
         tableView.register(ServiceTableViewCell.self, forCellReuseIdentifier: "ServiceCell")
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
@@ -36,16 +41,18 @@ class ViewController: UIViewController {
         }
         
         URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
-            if let data = data {
-                do {
-                    let apiResponse = try JSONDecoder().decode(ApiResponse.self, from: data)
+            guard let data = data else {
+                print(error ?? "Unknown error")
+                return
+            }
+            do {
+                let apiResponse = try JSONDecoder().decode(ApiResponse.self, from: data)
+                DispatchQueue.main.async {
                     self?.services = apiResponse.body.services
-                    DispatchQueue.main.async {
-                        self?.tableView.reloadData()
-                    }
-                } catch {
-                    print(error)
+                    self?.tableView.reloadData()
                 }
+            } catch {
+                print(error)
             }
         }.resume()
     }
@@ -60,33 +67,30 @@ extension ViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ServiceCell", for: indexPath) as? ServiceTableViewCell else {
             fatalError("The dequeued cell is not an instance of ServiceTableViewCell.")
         }
-        
-        guard let image = UIImage(named: "temp") else {
-            fatalError("can not load image")
-        }
-        
+
         let service = services[indexPath.row]
+        cell.nameLabel.text = service.name
+        cell.descriptionLabel.text = service.description
+
         if let imageURL = URL(string: service.iconURL) {
-                URLSession.shared.dataTask(with: imageURL) { data, _, error in
-                    if let error = error {
-                        print("Error downloading image: \(error)")
-                        return
-                    }
-                    
-                    if let data = data, let image = UIImage(data: data) {
-                        DispatchQueue.main.async {
-                            cell.configure(with: service.name, and: service.description, and: image)
+            URLSession.shared.dataTask(with: imageURL) { data, _, error in
+                if let error = error {
+                    print("Error downloading image: \(error)")
+                    return
+                }
+                if let data = data, let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        if tableView.indexPath(for: cell) == indexPath {
+                            cell.iconImageView.image = image
                         }
-                    } else {
-                        print("Invalid image data")
                     }
-                }.resume()
-            } else {
-                print("Invalid image URL")
-            }
-        
-        cell.configure(with: "dddd", and: "Самые популярные аоаоаоа аоаоао аоаооа вв", and: image)
-       
+                } else {
+                    print("Invalid image data")
+                }
+            }.resume()
+        } else {
+            print("Invalid image URL")
+        }
         return cell
     }
 }

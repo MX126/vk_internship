@@ -12,9 +12,9 @@ class ServiceTableViewCell: UITableViewCell {
     
     // MARK: - private properties
     
-    private let iconImageView = UIImageView()
-    private let nameLabel = UILabel()
-    private let descriptionLabel = UILabel()
+    let iconImageView = UIImageView()
+    let nameLabel = UILabel()
+    let descriptionLabel = UILabel()
     private let proceedImageView = UIImageView()
     
     // MARK: - life cycle
@@ -36,15 +36,7 @@ class ServiceTableViewCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    // MARK: - actions
-    
-    func configure(with text: String, and desc: String, and image: UIImage) {
-        self.iconImageView.image = image
-        self.nameLabel.text = text
-        self.descriptionLabel.text = desc
-    }
-    
+        
     // MARK: - setup
     
     private func setup() {
