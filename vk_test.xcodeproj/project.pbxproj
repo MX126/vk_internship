@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9EA1D50B2BB36E4F002A1029 /* ServicesInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA1D50A2BB36E4F002A1029 /* ServicesInformationViewModel.swift */; };
 		9EA203BA2BB219ED00B3233A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA203B92BB219ED00B3233A /* AppDelegate.swift */; };
 		9EA203BC2BB219ED00B3233A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA203BB2BB219ED00B3233A /* SceneDelegate.swift */; };
-		9EA203BE2BB219ED00B3233A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA203BD2BB219ED00B3233A /* ViewController.swift */; };
 		9EA203C32BB219EF00B3233A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EA203C22BB219EF00B3233A /* Assets.xcassets */; };
 		9EA203DA2BB21B7600B3233A /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 9EA203D92BB21B7600B3233A /* PinLayout */; };
 		9ED991502BB223FE00D43FDA /* ServicesInformationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED9914A2BB223FE00D43FDA /* ServicesInformationPresenter.swift */; };
@@ -26,10 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9EA1D50A2BB36E4F002A1029 /* ServicesInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesInformationViewModel.swift; sourceTree = "<group>"; };
 		9EA203B62BB219ED00B3233A /* vk_test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vk_test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EA203B92BB219ED00B3233A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EA203BB2BB219ED00B3233A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9EA203BD2BB219ED00B3233A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9EA203C22BB219EF00B3233A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9EA203C72BB219EF00B3233A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9ED9914A2BB223FE00D43FDA /* ServicesInformationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesInformationPresenter.swift; sourceTree = "<group>"; };
@@ -57,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9EA1D5092BB36E24002A1029 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9EA1D50A2BB36E4F002A1029 /* ServicesInformationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		9EA203AD2BB219ED00B3233A = {
 			isa = PBXGroup;
 			children = (
@@ -80,7 +88,6 @@
 				9ED9915D2BB23E5E00D43FDA /* Entities */,
 				9ED991492BB2239F00D43FDA /* Modules */,
 				9EA203DB2BB21C9F00B3233A /* Support */,
-				9EA203BD2BB219ED00B3233A /* ViewController.swift */,
 				9EA203C72BB219EF00B3233A /* Info.plist */,
 			);
 			path = vk_test;
@@ -99,6 +106,7 @@
 		9ED991492BB2239F00D43FDA /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				9EA1D5092BB36E24002A1029 /* ViewModel */,
 				9ED991572BB2284400D43FDA /* Cell */,
 				9ED9914A2BB223FE00D43FDA /* ServicesInformationPresenter.swift */,
 				9ED9914B2BB223FE00D43FDA /* ServicesInformationRouter.swift */,
@@ -233,12 +241,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EA203BE2BB219ED00B3233A /* ViewController.swift in Sources */,
 				9ED991522BB223FE00D43FDA /* ServicesInformationViewController.swift in Sources */,
 				9EA203BA2BB219ED00B3233A /* AppDelegate.swift in Sources */,
 				9ED991632BB23EC800D43FDA /* ApiResponse.swift in Sources */,
 				9ED991542BB223FE00D43FDA /* ServicesInformationInteractor.swift in Sources */,
 				9ED9915C2BB22BD500D43FDA /* UIView+ext.swift in Sources */,
+				9EA1D50B2BB36E4F002A1029 /* ServicesInformationViewModel.swift in Sources */,
 				9ED9915F2BB23E7300D43FDA /* Service.swift in Sources */,
 				9ED991552BB223FE00D43FDA /* ServicesInformationContainer.swift in Sources */,
 				9ED991512BB223FE00D43FDA /* ServicesInformationRouter.swift in Sources */,

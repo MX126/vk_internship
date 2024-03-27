@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         setupWindow(with: scene)
         
-        let viewController = ViewController()
+        let viewController = ServicesInformationContainer.assemble(with: .init()).viewController
         window?.rootViewController = viewController
     }
     
