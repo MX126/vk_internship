@@ -83,12 +83,19 @@ final class ServicesInformationViewController: UIViewController {
 // MARK: - ServicesInformationViewInput
 
 extension ServicesInformationViewController: ServicesInformationViewInput {
-    func configure(with model: ServicesInformationViewModel) {
-        titleLabel.attributedText = model.title
+    func showError(with key: String, message: String) {
+        switch key {
+        case "Json body":
+            AlertManager.showInvalidJsonBodyAlert(on: self, message: message)
+        case "Url":
+            AlertManager.showInvalidUrlAlert(on: self, message: message)
+        default:
+            AlertManager.showInvalidAlert(on: self)
+        }
     }
     
-    func showError() {
-        print("error") // alert manager
+    func configure(with model: ServicesInformationViewModel) {
+        titleLabel.attributedText = model.title
     }
     
     func update(with services: [Service]) {

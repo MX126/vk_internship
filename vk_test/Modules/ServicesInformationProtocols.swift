@@ -16,16 +16,16 @@ protocol ServicesInformationModuleOutput: AnyObject {
 }
 
 protocol ServicesInformationViewInput: AnyObject {
-    func showError()
+    func showError(with key: String, message: String)
     func update(with services: [Service])
-    func configure(with model: ServicesInformationViewModel)
     func updateImage(_ image: UIImage?, for urlString: String)
+    func configure(with model: ServicesInformationViewModel)
 }
 
 protocol ServicesInformationViewOutput: AnyObject {
     func didLoadView()
-    func loadImage(at indexPath: IndexPath, urlString: String)
     func didSelectService(_ service: Service)
+    func loadImage(at indexPath: IndexPath, urlString: String)
 }
 
 protocol ServicesInformationInteractorInput: AnyObject {
@@ -35,9 +35,9 @@ protocol ServicesInformationInteractorInput: AnyObject {
 
 protocol ServicesInformationInteractorOutput: AnyObject {
     func didFetchBody(services: [Service])
-    func didFailFetchBody()
     func didFetchImage(_ image: UIImage?, for urlString: String)
-    func didFailFetchImage(for urlString: String, error: Error)
+    func didFailFetchBody(with message: String)
+    func didFailFetchImage(with message: String)
 }
 
 protocol ServicesInformationRouterInput: AnyObject {

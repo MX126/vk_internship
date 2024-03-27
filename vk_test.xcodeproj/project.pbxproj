@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9EA1D50B2BB36E4F002A1029 /* ServicesInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA1D50A2BB36E4F002A1029 /* ServicesInformationViewModel.swift */; };
+		9EA1D5112BB43EC7002A1029 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA1D5102BB43EC7002A1029 /* AlertManager.swift */; };
 		9EA203BA2BB219ED00B3233A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA203B92BB219ED00B3233A /* AppDelegate.swift */; };
 		9EA203BC2BB219ED00B3233A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA203BB2BB219ED00B3233A /* SceneDelegate.swift */; };
 		9EA203C32BB219EF00B3233A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EA203C22BB219EF00B3233A /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		9EA1D50A2BB36E4F002A1029 /* ServicesInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesInformationViewModel.swift; sourceTree = "<group>"; };
+		9EA1D5102BB43EC7002A1029 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		9EA203B62BB219ED00B3233A /* vk_test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vk_test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EA203B92BB219ED00B3233A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EA203BB2BB219ED00B3233A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		9EA1D50F2BB43EB7002A1029 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9EA1D5102BB43EC7002A1029 /* AlertManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		9EA203AD2BB219ED00B3233A = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +94,7 @@
 		9EA203B82BB219ED00B3233A /* vk_test */ = {
 			isa = PBXGroup;
 			children = (
+				9EA1D50F2BB43EB7002A1029 /* Helpers */,
 				9ED9915A2BB22B9100D43FDA /* Extensions */,
 				9ED9915D2BB23E5E00D43FDA /* Entities */,
 				9ED991492BB2239F00D43FDA /* Modules */,
@@ -243,6 +254,7 @@
 			files = (
 				9ED991522BB223FE00D43FDA /* ServicesInformationViewController.swift in Sources */,
 				9EA203BA2BB219ED00B3233A /* AppDelegate.swift in Sources */,
+				9EA1D5112BB43EC7002A1029 /* AlertManager.swift in Sources */,
 				9ED991632BB23EC800D43FDA /* ApiResponse.swift in Sources */,
 				9ED991542BB223FE00D43FDA /* ServicesInformationInteractor.swift in Sources */,
 				9ED9915C2BB22BD500D43FDA /* UIView+ext.swift in Sources */,

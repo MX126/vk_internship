@@ -9,6 +9,21 @@
 import UIKit
 
 final class ServicesInformationPresenter {
+    
+    enum errorKey {
+        case json
+        case url
+        
+        func stringValue() -> String {
+            switch self {
+            case .json:
+                return "Json body"
+            case .url:
+                return "Url"
+            }
+        }
+    }
+    
     weak var view: ServicesInformationViewInput?
     weak var moduleOutput: ServicesInformationModuleOutput?
     
@@ -19,6 +34,10 @@ final class ServicesInformationPresenter {
         self.router = router
         self.interactor = interactor
     }
+    
+    private func handleError() -> String {
+        return "Невозможно перейти по ссылке"
+    }
 }
 
 extension ServicesInformationPresenter: ServicesInformationModuleInput {
@@ -28,7 +47,9 @@ extension ServicesInformationPresenter: ServicesInformationViewOutput {
     
     func didSelectService(_ service: Service) {
         guard let url = URL(string: service.link) else {
-            view?.showError()
+            DispatchQueue.main.async {
+                self.view?.showError(with: errorKey.url.stringValue(), message: self.handleError())
+            }
             return
         }
 
@@ -48,21 +69,25 @@ extension ServicesInformationPresenter: ServicesInformationViewOutput {
 }
 
 extension ServicesInformationPresenter: ServicesInformationInteractorOutput {
+    func didFailFetchImage(with message: String) {
+        DispatchQueue.main.async {
+            self.view?.showError(with: errorKey.json.stringValue(), message: message)
+        }
+    }
+    
+    func didFailFetchBody(with message: String) {
+        DispatchQueue.main.async {
+            self.view?.showError(with: errorKey.json.stringValue(), message: message)
+        }
+    }
+    
     func didFetchImage(_ image: UIImage?, for urlString: String) {
         DispatchQueue.main.async {
             self.view?.updateImage(image, for: urlString)
         }
     }
     
-    func didFailFetchImage(for urlString: String, error: Error) {
-        view?.showError()
-    }
-    
     func didFetchBody(services: [Service]) {
         view?.update(with: services)
-    }
-    
-    func didFailFetchBody() {
-        view?.showError()
     }
 }

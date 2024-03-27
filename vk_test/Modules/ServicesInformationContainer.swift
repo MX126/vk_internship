@@ -23,6 +23,7 @@ final class ServicesInformationContainer {
         presenter.moduleOutput = context.moduleOutput
         
         interactor.output = presenter
+        router.viewController = viewController
         
         return ServicesInformationContainer(view: viewController, input: presenter, router: router)
     }

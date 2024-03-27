@@ -49,7 +49,7 @@ class ServiceTableViewCell: UITableViewCell {
         iconImageView.layer.cornerRadius = Constants.iconImageView.cornerRadius
         iconImageView.clipsToBounds = true
         
-        proceedImageView.image = UIImage(systemName: "chevron.right")
+        proceedImageView.image = UIImage(systemName: Constants.proceedImageView.image)
         proceedImageView.tintColor = Constants.proceedImageView.gray
     }
     
@@ -126,6 +126,7 @@ private extension ServiceTableViewCell {
             static let size: CGSize = CGSize(width: 16, height: 16)
             static let gray = UIColor.gray
             static let marginToText: CGFloat = 5
+            static let image: String = "chevron.right"
         }
     }
 }

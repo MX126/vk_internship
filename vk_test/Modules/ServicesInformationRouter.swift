@@ -9,6 +9,7 @@
 import UIKit
 
 final class ServicesInformationRouter {
+    weak var viewController: ServicesInformationViewController?
 }
 
 extension ServicesInformationRouter: ServicesInformationRouterInput {
@@ -16,7 +17,12 @@ extension ServicesInformationRouter: ServicesInformationRouterInput {
         if UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         } else {
-            print("")
+            guard let vc = viewController  else {
+                fatalError("No access to viewController")
+            }
+            DispatchQueue.main.async {
+                AlertManager.showInvalidAppUrl(on: vc)
+            }
         }
     }
 }
